@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ملف الأداء الوظيفي | Ayman Sayed</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif;}
+body{background:#0f2027;color:white;overflow-x:hidden;transition:0.4s;}
+body.light{background:#f4f4f4;color:#111;}
+
+#particles-js{position:fixed;width:100%;height:100%;z-index:-1;}
+
+#intro{
+position:fixed;width:100%;height:100%;
+background:#000;display:flex;
+align-items:center;justify-content:center;
+z-index:9999;color:#ffd700;
+font-size:40px;letter-spacing:4px;
+animation:fadeOut 2s ease forwards;
+animation-delay:2s;
+}
+@keyframes fadeOut{to{opacity:0;visibility:hidden;}}
+
+.controls{
+position:fixed;top:20px;left:20px;
+z-index:1000;display:flex;gap:10px;
+}
+.control-btn{
+padding:8px 15px;background:#ffd700;
+color:#000;border:none;border-radius:20px;
+cursor:pointer;font-weight:bold;
+}
+
+header{
+min-height:100vh;display:flex;
+flex-direction:column;
+align-items:center;justify-content:center;
+text-align:center;padding:40px 20px;
+}
+
+.logo{width:130px;margin-bottom:20px;}
+
+.profile-wrapper{
+animation:dropDown 1.5s ease forwards;
+transform:translateY(-250px);
+opacity:0;transition:0.2s;
+}
+@keyframes dropDown{to{transform:translateY(0);opacity:1;}}
+
+.profile-img{
+width:420px;height:420px;
+object-fit:cover;border-radius:50%;
+box-shadow:0 0 80px gold;
+transition:0.4s;
+}
+.profile-img:hover{
+transform:scale(1.1) rotate(3deg);
+box-shadow:0 0 120px gold;
+}
+
+h1{margin-top:25px;font-size:42px;color:#ffd700;}
+.tagline{margin-top:10px;font-size:22px;}
+
+.cv-box{
+margin-top:30px;
+background:rgba(255,255,255,0.08);
+padding:25px;border-radius:15px;
+backdrop-filter:blur(10px);
+max-width:650px;
+}
+
+.btn{
+display:inline-block;margin-top:15px;
+padding:10px 25px;background:#ffd700;
+color:black;border-radius:25px;
+text-decoration:none;font-weight:bold;
+}
+
+.section{padding:80px 20px;max-width:1200px;margin:auto;}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+perspective:1000px;opacity:0;
+transform:translateX(120px);
+transition:0.8s;
+}
+.card.left{transform:translateX(-120px);}
+.card.show{opacity:1;transform:translateX(0);}
+
+.card-inner{
+position:relative;width:100%;
+height:170px;transition:transform 0.8s;
+transform-style:preserve-3d;
+}
+.card:hover{transform:scale(1.05);}
+.card.flipped .card-inner{transform:rotateY(180deg);}
+
+.card-front,.card-back{
+position:absolute;width:100%;
+height:100%;backface-visibility:hidden;
+border-radius:15px;display:flex;
+align-items:center;justify-content:center;
+font-size:17px;text-align:center;padding:15px;
+}
+.card-front{
+background:linear-gradient(45deg,#1f4037,#99f2c8);
+color:black;font-weight:bold;
+}
+.card-back{
+background:#ffd700;color:black;
+transform:rotateY(180deg);
+}
+
+footer{
+text-align:center;padding:30px;
+margin-top:50px;background:#111;
+}
+</style>
+</head>
+
+<body>
+
+<div id="intro">WELCOME</div>
+<div id="particles-js"></div>
+
+<div class="controls">
+<button class="control-btn" onclick="toggleLang()">EN</button>
+<button class="control-btn" onclick="toggleMode()">🌙</button>
+</div>
+
+<header>
+
+ 
+<div class="profile-wrapper" id="profile3d">
+<img src="profile.png" class="profile-img">
+</div>
+
+<h1 id="name">أيمن سيد إمام</h1>
+<p class="tagline">معاً نحو تعليم متميز… وبناء جيل واعٍ ومبدع</p>
+
+<div class="cv-box">
+<p><strong>المؤهل:</strong> Bachelor of Arts in German</p>
+<p><strong>التخصص:</strong> German Language Teacher</p>
+<p><strong>سنة التخرج:</strong> 2020</p>
+<p><strong>البريد:</strong> egy.b.60261@delta.edu.sa</p>
+
+<a href="performance.pdf" download class="btn" target="_blank">تحميل ملف الأداء PDF</a>
+</div>
+
+</header>
+
+<section class="section">
+<h2 style="text-align:center;margin-bottom:40px;font-size:32px;">معايير الأداء</h2>
+
+<div class="cards">
+
+<div class="card left" onclick="flipAndGo(this,'https://drive.google.com/drive/folders/1dEq_w7dQS_fqvpKCPBrl0LTHAC0vZ4vY?hl=ar')"><div class="card-inner"><div class="card-front">المعيار الأول - أداء الواجبات</div><div class="card-back">جارٍ الفتح...</div></div></div>
+
+<div class="card" onclick="flipAndGo(this,'https://drive.google.com/drive/folders/15i-s8oEBHUM81Yv5n1mgB1JPxCs5GU1Z?hl=ar')"><div class="card-inner"><div class="card-front">المعيار الثاني - المجتمع المهني</div><div class="card-back">جارٍ الفتح...</div></div></div>
+
+<div class="card left" onclick="flipAndGo(this,'https://drive.google.com/drive/folders/1sGpWGuAB-FtqUyikT-6NBSEVQgDN9jpW?hl=ar')"><div class="card-inner"><div class="card-front">المعيار الثالث - أولياء الأمور</div><div class="card-back">جارٍ الفتح...</div></div></div>
+
+<div class="card" onclick="flipAndGo(this,'https://drive.google.com/drive/folders/1TOwJM8h2ptiXskkQEgEKHYM1XExPI_Wr?hl=ar')"><div class="card-inner"><div class="card-front">المعيار الرابع - استراتيجيات التدريس</div><div class="card-back">جارٍ الفتح...</div></div></div>
+
+<div class="card left" onclick="flipAndGo(this,'https://drive.google.com/drive/folders/1dN6_xclnpPk7o18u0FC3hMljs1nGEVGJ?hl=ar')"><div class="card-inner"><div class="card-front">المعيار الخامس - تحسين النتائج</div><div class="card-back">جارٍ الفتح...</div></div></div>
+
+<div class="card" onclick="flipAndGo(this,'https://drive.google.com/drive/folders/1uJ7ENR1Otcgw6xA4_BYeQnPxJ2efbZol?hl=ar')"><div class="card-inner"><div class="card-front">المعيار السادس - خطة التعلم</div><div class="card-back">جارٍ الفتح...</div></div></div>
+
+<div class="card left" onclick="flipAndGo(this,'https://drive.google.com/drive/folders/1hopgwXTqPwmcnYfD4o9kgABBQZuZO2o3?hl=ar')"><div class="card-inner"><div class="card-front">المعيار السابع - توظيف التقنيات</div><div class="card-back">جارٍ الفتح...</div></div></div>
+
+<div class="card" onclick="flipAndGo(this,'https://drive.google.com/drive/folders/1M8auyRla1BZ3k74EVL8Ck2QDgEG3y1oi?hl=ar')"><div class="card-inner"><div class="card-front">المعيار الثامن - البيئة التعليمية</div><div class="card-back">جارٍ الفتح...</div></div></div>
+
+<div class="card left" onclick="flipAndGo(this,'https://drive.google.com/drive/folders/1ptc11oFyGl4Ebwjfbh83eQGAMCbJH103?hl=ar')"><div class="card-inner"><div class="card-front">المعيار التاسع - الإدارة الصفية</div><div class="card-back">جارٍ الفتح...</div></div></div>
+
+<div class="card" onclick="flipAndGo(this,'https://drive.google.com/drive/folders/16rsuuHkvv-7e4s1cBAemtYZEP-ouY_Jf?hl=ar')"><div class="card-inner"><div class="card-front">المعيار العاشر - تحليل النتائج</div><div class="card-back">جارٍ الفتح...</div></div></div>
+
+<div class="card left" onclick="flipAndGo(this,'https://drive.google.com/drive/folders/1aTTK_kNuVDR1Y6CJg-FvKxG-m5Re8LRM?hl=ar')"><div class="card-inner"><div class="card-front">المعيار الحادي عشر - تنوع التقويم</div><div class="card-back">جارٍ الفتح...</div></div></div>
+
+</div>
+</section>
+
+<footer>© 2026 Ayman Sayed | Delta Schools</footer>
+
+<script>
+function toggleMode(){document.body.classList.toggle("light");}
+function toggleLang(){
+if(document.documentElement.lang==="ar"){
+document.documentElement.lang="en";
+document.documentElement.dir="ltr";
+document.getElementById("name").innerText="Ayman Sayed Emam";
+}else{location.reload();}
+}
+function flipAndGo(card,link){
+card.classList.add("flipped");
+setTimeout(()=>{window.open(link,"_blank");},800);
+}
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add("show");}
+});
+},{threshold:0.2});
+document.querySelectorAll(".card").forEach(card=>observer.observe(card));
+
+const profile=document.getElementById("profile3d");
+document.addEventListener("mousemove",(e)=>{
+let x=(window.innerWidth/2 - e.pageX)/30;
+let y=(window.innerHeight/2 - e.pageY)/30;
+profile.style.transform=`rotateY(${x}deg) rotateX(${y}deg)`;
+});
+particlesJS("particles-js",{particles:{number:{value:80},size:{value:3},move:{speed:2},line_linked:{enable:true,opacity:0.2}}});
+</script>
+
+</body>
+</html>
